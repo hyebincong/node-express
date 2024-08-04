@@ -1,35 +1,22 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: node-express
-  labels:
-    app: node-express
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: node-express
-  template:
-    metadata:
-      labels:
-        app: node-express
-    spec:
-      containers:
-      - name: node-express
-        image: sel/hyebincong-diary-node-express:latest
-        ports:
-        - containerPort: 3000
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 3000
-          initialDelaySeconds: 10
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 3000
-          initialDelaySeconds: 30
-          periodSeconds: 30
-      restartPolicy: Always
+kname: node-express
+app: node@16
+resources:
+  spot: true
+  memory: 0.5
+options:
+  env:
+    - name: NODE_ENV
+      value: production
+  ports: 3000
+  install: npm ci
+  build: npm run build  # 만약 빌드 스크립트가 없다면 이 줄을 삭제하거나 주석 
+처리하세요
+  start: npm start
+  healthz: /healthz
+  buildenv: []
+context:
+  git:
+    url: https://github.com/hyebincong/node-express.git
+    branch: main
+  preset: node
 

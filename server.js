@@ -79,3 +79,8 @@ app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
 
+// /healthz 라는 새로운 경로 추가
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK'); // 서버가 건강하면 OK라고 대답해요
+});
+

@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e3e3; /* 연한 핑크색 배경 */
+    line-height: 1.4; /* 전체적인 줄 간격 조정 */
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* 컨테이너 둥근 모서리 */
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    line-height: 1.2; /* 제목의 줄 간격 조정 */
+}
+
+#entries {
+    margin-bottom: 20px;
+}
+
+.entry {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #f2c6c6; /* 핑크색 경계선 */
+    border-radius: 4px;
+    background-color: #fee;
+    line-height: 1.4; /* 엔트리의 줄 간격 조정 */
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #f2c6c6; /* 핑크색 테두리 */
+    border-radius: 4px;
+    line-height: 1.4; /* 텍스트 영역의 줄 간격 조정 */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f2a3a3; /* 핑크색 버튼 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1.4; /* 버튼의 줄 간격 조정 */
+}
+
+button:hover {
+    background-color: #e89797; /* 버튼 호버 색상 */
+}
+
+.comment-text {
+    width: calc(100% - 50px); /* 댓글 영역의 크기 조정 */
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #f2c6c6; /* 핑크색 테두리 */
+    border-radius: 4px;
+    line-height: 1.4; /* 댓글 텍스트의 줄 간격 조정 */
+}
+
+.submit-comment {
+    padding: 5px 10px;
+    background-color: #f2a3a3; /* 핑크색 버튼 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em; /* 작은 폰트 사이즈 */
+    line-height: 1.4; /* 버튼의 줄 간격 조정 */
+}
+
+.submit-comment:hover {
+    background-color: #e89797; /* 버튼 호버 색상 */
+}
+
+.comment {
+    font-size: 0.9em; /* 댓글 폰트 사이즈 */
+    line-height: 1.4; /* 댓글의 줄 간격 조정 */
+}
+
+.comment::before {
+    content: "🎀 "; /* 귀여운 리본 이모티콘 */
+}
+
